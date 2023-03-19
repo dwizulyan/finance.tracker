@@ -1,0 +1,187 @@
+:root{
+    --main:white;
+    --second:rgb(235, 235, 235);
+    --third:rgb(49, 49, 49);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Montserrat";
+}
+
+.navigation{
+    width: 100%;
+    height:10vh;
+    gap: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.navigation .profile-wrap{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap:5px;
+    color: var(--third);
+}
+.navigation .profile-wrap p{
+    font-size: 12px;
+}
+.navigation .profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 50px;
+    height: 50px;
+}
+.navigation .profile-photo{
+    border-radius: 50%;
+    background-color: var(--third);
+}
+.navigation .dropdown{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--third);
+    height: 50px;
+    top: 0%;
+    transition: all ease-in-out .1s;
+}
+.dropdown-menu{
+    top: 110%;
+    background-color: var(--second);
+    right: 5%;
+    padding: 50%;
+    border-radius: 8px;
+    display: none;
+    width: 300px;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.navigation .dropdown .fas:hover{
+    cursor: pointer;
+}
+
+.dropdown-menu.active{
+    display: flex;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 5%;
+}
+
+.incomeAndExpanse{
+    width: 100%;
+    background-color: var(--second);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.incomeAndExpanse form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.incomeAndExpanse form input{
+    width: 70%;
+    height: max-content;
+    padding: 7px;
+    border: none;
+    border-radius: 8px;
+}
+.incomeAndExpanse form input:focus{
+    outline: none;
+}
+.incomeAndExpanse form div{
+    display: flex;
+    gap:15px;
+}
+.incomeAndExpanse form div .radio{
+    display: none;
+}
+
+.incomeAndExpanse form div label{
+    border: none;
+    background: var(--third);
+    padding:7px;
+    border-radius: 8px;
+    color: var(--second);
+}
+.incomeAndExpanse form div label:hover{
+    cursor: pointer;
+}
+.incomeAndExpanse form button{
+    border: none;
+    background-color: var(--third);
+    color: var(--main);
+    border-radius:8px ;
+    padding: 7px;
+}
+
+.incomeAndExpanse form button:hover{    
+    cursor: pointer;
+}   
+
+.records{
+    width: 100%;
+    margin-top: 25px;
+}
+.records .title-top{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.records-list{
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    height: 330px;
+    overflow: scroll;
+}
+.records-list::-webkit-scrollbar{
+    width: 0;
+}
+.item{
+    margin-top: 5px;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--second);
+    border-radius: 8px;
+}
+.balanceCategory{
+    margin: 5px 0;
+    font-size: 14px;
+    padding: 2px 5px;
+    border: 1px solid var(--third);
+    border-radius: 8px;
+    width: max-content;
+}
+.date{
+    font-size: 12px;
+}
+.active-income{
+    background: green !important;
+}
+.active-expanse{
+    background: red !important;
+}
+
+.category{
+    background-color: var(--main);
+    border: none;
+    padding: 7px;
+    border-radius: 8px;
+}
+.category:focus{
+    outline: none;
+}
